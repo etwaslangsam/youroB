@@ -1,0 +1,5 @@
+charset,Shift_JIS
+name,—c«˜Io/‚ä‚¢
+type,ghost
+directory,youroB
+refresh,0

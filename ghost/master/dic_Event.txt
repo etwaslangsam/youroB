@@ -1,0 +1,70 @@
+一般的なイベント対応
+
+＊OnWindowStateRestore
+＞出てくる
+
+＊OnInstallComplete
+：(（replace（バイト値,１）（Ｒ１）（バイト値,１）\（バイト値,１）\\）インストール)
+
+＊OnURLDropped
+：(ダウンロード)
+
+＊OnUpdateBegin
+：(ネットワーク更新開始)
+
+＊OnUpdateReady
+：
+
+＊OnUpdateComplete
+＞ネットワーク更新（R0）
+：(完了)
+
+＊OnUpdateFailure
+＞ネットワーク更新（R0）
+：(失敗)
+
+＊ネットワーク更新none
+：(更新なし)
+
+＊ネットワーク更新changed
+：(ネットワーク更新成功)
+
+＊ネットワーク更新timeout
+：(タイムアウト)
+
+＊ネットワーク更新md5 miss
+：(md5エラー)
+
+＊ネットワーク更新artificial
+：(更新中断)
+
+＊OnUpdatedataCreating
+：
+
+＊OnUpdatedataCreated
+：(完了)
+
+＊OnNarCreating
+：
+
+＊OnNarCreated
+：(完了)
+
+＊OnKeyPress
+＞（Ｒ０）が押された
+
+＊tが押された
+（）
+
+＊rが押された
+＄辞書リロード	実行
+
+＊OnUserInput
+＞（Ｒ０）をタイムアウト	（compare（バイト値,１）（Ｒ１）（バイト値,１）timeout）
+＞（Ｒ０）を空打ちされた	（is_empty（バイト値,１）（Ｒ１））
+＄（Ｒ０）	（Ｒ１）
+＞（Ｒ０）を教えてもらった
+
+＊OnUserInputCancel
+＞（Ｒ０）を空打ちされた	（compare,（Ｒ１）,close）
+

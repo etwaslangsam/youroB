@@ -1,0 +1,36 @@
+ネットワーク更新・メニューURLなど
+
+ネットワーク更新先URL、メニューリンクURLなど
+・更新先URL
+・おすすめリンク
+・ポータルリンク
+　　おすすめ／ポータルの記述
+　　１行目がサイト名 
+　　２行目がジャンプ先URL 
+　　３行目がバナーURL（省略可） 
+　　４行目以降はジャンプ時に表示される会話文（省略可） 
+　　１行目に「-」とだけ記入すると、罫線を入れられます。
+
+＊sakura.recommendsites
+-
+
+＊sakura.portalsites
+GHOST TOWN
+http://ghosttown.mikage.jp/
+
+＊sakura.portalsites
+Disc-2
+http://disc2.s56.xrea.com/
+
+＊sakura.portalsites
+霊界通信
+http://ghost-log.sakuratan.com/
+
+＊sakura.portalsites
+ゴースト回覧板３ｒｄ
+http://jbbs.shitaraba.net/computer/44300/
+
+＊sakura.portalsites
+うにゅう＠もどき
+http://uka.jpn.org/unyu/
+
