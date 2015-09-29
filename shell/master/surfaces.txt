@@ -64,3 +64,15 @@ surface109
 element0,base,surface5160.png,0,0
 element1,overlay,surface1069.png,0,0
 }
+
+surface200
+{
+element0,base,surface1960.png,0,0
+element1,overlay,surface1070.png,0,0
+}
+
+surface201
+{
+element0,base,surface2000.png,0,0
+element1,overlay,surface1009.png,0,0
+}
