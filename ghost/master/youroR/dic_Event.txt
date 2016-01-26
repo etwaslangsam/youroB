@@ -1,0 +1,67 @@
+一般的なイベント対応
+
+＊OnWindowStateRestore
+＞出てくる
+
+＊OnInstallComplete
+：(（replace（バイト値,１）（Ｒ１）（バイト値,１）\（バイト値,１）\\）インストール)
+
+＊OnURLDropped
+：(ダウンロード)
+
+＊OnUpdateBegin
+：(ネットワーク更新開始)
+
+＊OnUpdateReady
+：(（Ｒ０）個の更新ファイルがあります)
+
+＊OnUpdateComplete
+：（whenlist,（Ｒ０）==
+,none,更新はありません
+,changed,更新完了
+）
+
+＊OnUpdateFailure
+：(（Ｒ０）エラー)
+
+＊OnUpdatedataCreating
+：
+
+＊OnUpdatedataCreated
+：(完了)
+
+＊OnNarCreating
+：
+
+＊OnNarCreated
+：(完了)
+
+＊OnKeyPress
+＞（Ｒ０）が押された
+
+＊tが押された
+（）
+
+＊rが押された
+＄辞書リロード	実行
+：(リロード)
+
+＊OnUserInput
+＞（Ｒ０）をタイムアウト	（compare（バイト値,１）（Ｒ１）（バイト値,１）timeout）
+＞（Ｒ０）を空打ちされた	（is_empty（バイト値,１）（Ｒ１））
+＄（Ｒ０）	（Ｒ１）
+＞（Ｒ０）を教えてもらった
+
+＊OnUserInputCancel
+＞（Ｒ０）を空打ちされた	（compare,（Ｒ１）,close）
+
+＊OnShellChanging
+（なでられ）
+（whenlist、（Ｒ０）==
+、ゆい、（set,辞書フォルダ,.）
+、みこと、（set,辞書フォルダ,youroW）
+）
+
+＊OnShellChanged
+＞起動
+

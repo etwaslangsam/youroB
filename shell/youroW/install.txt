@@ -1,0 +1,4 @@
+charset,Shift_JIS
+type,shell
+name,‚o•‚v•‚e
+directory,P&W&F

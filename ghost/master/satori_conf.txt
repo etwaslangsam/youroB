@@ -9,7 +9,10 @@
 ＄なでられ持続秒数	２
 ＄なでられ反応回数	６０
 ＄トーク中のなでられ反応	無効
-＄自動挿入ウェイトタイプ	里々
+＄自動挿入ウェイトタイプ	一般
+＄現在地	教室
+＄移動距離	-1
+＄ユーザ名	ご主人様
 ＠SAORI
 calc,saori/ssu.dll,calc
 calc_float,saori/ssu.dll,calc_float

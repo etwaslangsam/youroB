@@ -1,6 +1,6 @@
 charset,Shift_JIS
 
-name,‚o•‚v•‚e
+name,‚ä‚¢
 
 type,shell
 

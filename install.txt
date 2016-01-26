@@ -1,5 +1,6 @@
 charset,Shift_JIS
-name,—c«˜Io/‚ä‚¢
+name,—c«˜Io
 type,ghost
 directory,youroB
-refresh,0
+refresh,1
+refreshundeletemask,satori_savedata.txt
