@@ -59,6 +59,7 @@
 、つきね、（set,辞書フォルダ,youroR）
 、みこと、（set,辞書フォルダ,youroW）
 ）
+＞終了
 
 ＊OnShellChanged
 ＞起動
