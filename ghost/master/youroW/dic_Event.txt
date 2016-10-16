@@ -1,11 +1,31 @@
 一般的なイベント対応
 
 ＊OnWindowStateRestore
-：\s[201]はぁ――（はーと） はぁ――（はーと）\w6
-・・・（ユーザ名）、スッキリしましたか？
+：\s[201]はぁ――――（はーと）　はぁ――――（はーと）\w6
+…………（ユーザ名）、スッキリしましたか？
+
+＊OnWindowStateRestore
+：\s[203]……（ユーザ名）。\w6
+シたくなったら、またいつでも私を使ってくださいね？
+
+＊OnWindowStateRestore
+：\s[210]（ユーザ名）の精が……垂れてしまいますわ（はーと）
+
+＊OnInstallBegin
+：\s[201]そんなモノ入るかしら（はーと）\w9
 
 ＊OnInstallComplete
+＞ゴースト追加	（Ｒ０）==ghost
+：\s[209]ああっ……大きいのが私の中に（はーと）
 ：(（replace（バイト値,１）（Ｒ１）（バイト値,１）\（バイト値,１）\\）インストール)
+
+＊ゴースト追加
+：\s[206]新しい子ですか？\w6
+（ユーザ名）……私はもう用済みなんですか？
+
+＊OnInstallFailure
+：\s[0]インストールに失敗しましたわ。
+：（Ｒ０）
 
 ＊OnURLDropped
 ：(ダウンロード)
@@ -55,13 +75,23 @@
 ＊OnUserInputCancel
 ＞（Ｒ０）を空打ちされた	（compare,（Ｒ１）,close）
 
-＊OnShellChanging
-（なでられ）
-（whenlist、（Ｒ０）==
-、ゆい、（set,辞書フォルダ,.）
-、つきね、（set,辞書フォルダ,youroR）
-）
+＊OnMinuteChange
+＞見切れ	（Ｒ１）==1
+＞時報	（現在分）==0
 
-＊OnShellChanged
-＞起動
+＊見切れ
+：\s[205]ふふふ。\w6
+物陰に連れ込んで、どうするおつもりですか？
 
+＊時報
+：\s[204]（現在時）時ですわ。
+
+＊OnChoiceTimeout
+：\s[210]放置プレイだなんてそんな……\w6
+\s[201]酷いですわ、（ユーザ名）（はーと）
+
+＊OnAnchorSelectEx
+＞（Ｒ１）
+
+＊OnAnchorSelect
+＞（Ｒ０）

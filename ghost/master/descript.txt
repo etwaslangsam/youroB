@@ -1,8 +1,10 @@
 charset,Shift_JIS
 name,—c«˜Io
 type,ghost
+craftman,etwaslangsam
 craftmanw,–q–ìMŸ
-craftmanurl,http://ghosthacking.webcrow.jp/index.html
+craftmanurl,https://sites.google.com/site/p5zxftwc/
+homeurl,https://raw.githubusercontent.com/etwaslangsam/youroB/master/
 readme,readme.txt
 sakura.name,˜Io­—
 sakura.seriko.defaultsurface,0
