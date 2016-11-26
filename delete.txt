@@ -1,1 +1,3 @@
 ghost/master/youroR/descript.txt
+shell/youroR/thumbnail.png
+shell/master/thumbnail.png

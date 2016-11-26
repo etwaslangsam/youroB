@@ -2,3 +2,5 @@
 ghost/master/satori_savebackup.txt,nonar,noupdate
 ghost/master/satori_savedata.txt,nonar,noupdate
 ghost/master/youroR/descript.txt,nonar,noupdate
+shell/youroR/thumbnail.png,nonar,noupdate
+shell/master/thumbnail.png,nonar,noupdate

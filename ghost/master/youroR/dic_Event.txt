@@ -65,3 +65,11 @@
 ＊OnShellChanged
 ＞起動
 
+＊OnAnchorSelectEx
+＄選択ラベル	（Ｒ０）
+＄選択ＩＤ	（Ｒ１）
+＞（Ｒ１）
+
+＊OnAnchorSelect
+＄選択ＩＤ	（Ｒ０）
+＞（Ｒ０）
