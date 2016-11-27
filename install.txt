@@ -4,3 +4,4 @@ type,ghost
 directory,youroB
 refresh,1
 refreshundeletemask,satori_savedata.txt
+robots,noindex
