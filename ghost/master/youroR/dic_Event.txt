@@ -57,9 +57,10 @@
 
 ＊OnShellChanging
 （なでられ）
-（whenlist、（Ｒ０）==
+（whenlist、（Reference0）==
 、ゆい、（set,辞書フォルダ,.）
 、みこと、（set,辞書フォルダ,youroW）
+、ような、（set,辞書フォルダ,youroV）
 ）
 
 ＊OnShellChanged
