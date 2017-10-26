@@ -1,29 +1,44 @@
 一般的なイベント対応
 
+＃────────────
+＃最小化解除
+＃────────────
 ＊OnWindowStateRestore
 ＞出てくる
 
+＃────────────
+＃インストール
+＃────────────
 ＊OnInstallComplete
-：(（replace（バイト値,１）（Ｒ１）（バイト値,１）\（バイト値,１）\\）インストール)
+：(（replace（バイト値,１）（Reference1）（バイト値,１）\（バイト値,１）\\）インストール)
 
+＃────────────
+＃ダウンロード
+＃────────────
 ＊OnURLDropped
 ：(ダウンロード)
 
+＃────────────
+＃ネットワーク更新
+＃────────────
 ＊OnUpdateBegin
 ：(ネットワーク更新開始)
 
 ＊OnUpdateReady
-：(（Ｒ０）個の更新ファイルがあります)
+：(（Reference0）個の更新ファイルがあります)
 
 ＊OnUpdateComplete
-：（whenlist,（Ｒ０）==
+：（whenlist,（Reference0）==
 ,none,更新はありません
 ,changed,更新完了
 ）
 
 ＊OnUpdateFailure
-：(（Ｒ０）エラー)
+：(（Reference0）エラー)
 
+＃────────────
+＃ファイル作成
+＃────────────
 ＊OnUpdatedataCreating
 ：
 
@@ -36,8 +51,11 @@
 ＊OnNarCreated
 ：(完了)
 
+＃────────────
+＃キー押下
+＃────────────
 ＊OnKeyPress
-＞（Ｒ０）が押された
+＞（Reference0）が押された
 
 ＊tが押された
 （）
@@ -47,14 +65,17 @@
 ：(リロード)
 
 ＊OnUserInput
-＞（Ｒ０）をタイムアウト	（compare（バイト値,１）（Ｒ１）（バイト値,１）timeout）
-＞（Ｒ０）を空打ちされた	（is_empty（バイト値,１）（Ｒ１））
-＄（Ｒ０）	（Ｒ１）
-＞（Ｒ０）を教えてもらった
+＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
+＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
+＄（Reference0）	（Reference1）
+＞（Reference0）を教えてもらった
 
 ＊OnUserInputCancel
-＞（Ｒ０）を空打ちされた	（compare,（Ｒ１）,close）
+＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
 
+＃────────────
+＃シェル変更
+＃────────────
 ＊OnShellChanging
 （なでられ）
 （whenlist、（Reference0）==
@@ -66,11 +87,14 @@
 ＊OnShellChanged
 ＞起動
 
+＃────────────
+＃選択肢
+＃────────────
 ＊OnAnchorSelectEx
-＄選択ラベル	（Ｒ０）
-＄選択ＩＤ	（Ｒ１）
-＞（Ｒ１）
+＄選択ラベル	（Reference0）
+＄選択ＩＤ	（Reference1）
+＞（Reference1）
 
 ＊OnAnchorSelect
-＄選択ＩＤ	（Ｒ０）
-＞（Ｒ０）
+＄選択ＩＤ	（Reference0）
+＞（Reference0）

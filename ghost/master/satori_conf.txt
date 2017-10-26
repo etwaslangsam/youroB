@@ -15,6 +15,7 @@
 ＄ユーザ名	ご主人様
 ＄PussyCount	０
 ＄SawariFlag	0
+＄TimeBell	OFF
 ＠SAORI
 calc,saori/ssu.dll,calc
 calc_float,saori/ssu.dll,calc_float
