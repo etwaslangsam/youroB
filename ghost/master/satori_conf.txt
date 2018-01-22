@@ -16,6 +16,8 @@
 ＄PussyCount	０
 ＄SawariFlag	0
 ＄TimeBell	OFF
+＄初ローター	0
+＄ローター	0
 ＠SAORI
 calc,saori/ssu.dll,calc
 calc_float,saori/ssu.dll,calc_float

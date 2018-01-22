@@ -89,7 +89,7 @@ element0,base,surface3940.png,0,0
 element1,overlay,surface1044.png,0,0
 }
 
-surface300-302
+surface300-304
 {
 element0,base,surface5540.png,0,0
 }
@@ -107,6 +107,16 @@ element1,overlay,surface1949.png,0,0
 surface302
 {
 element1,overlay,surface1941.png,0,0
+}
+
+surface303
+{
+element1,overlay,surface1944.png,0,0
+}
+
+surface304
+{
+element1,overlay,surface1954.png,0,0
 }
 
 surface400-401
@@ -139,7 +149,7 @@ surface501
 element1,overlay,surface1061.png,0,0
 }
 
-surface600-603
+surface600-605
 {
 element0,base,surface3940.png,0,0
 }
@@ -164,6 +174,16 @@ surface603
 element1,overlay,surface1041.png,0,0
 }
 
+surface604
+{
+element1,overlay,surface1044.png,0,0
+}
+
+surface605
+{
+element1,overlay,surface1054.png,0,0
+}
+
 surface700-706
 {
 element0,base,surface3200.png,0,0
@@ -181,7 +201,7 @@ element1,overlay,surface1023.png,0,0
 
 surface702
 {
-element1,overlay,surface1021.png,0,0
+element1,overlay,surface1013.png,0,0
 }
 
 surface703
@@ -221,7 +241,7 @@ element1,overlay,surface1023.png,0,0
 
 surface802
 {
-element1,overlay,surface1021.png,0,0
+element1,overlay,surface1013.png,0,0
 }
 
 surface803
@@ -261,7 +281,7 @@ element1,overlay,surface1023.png,0,0
 
 surface902
 {
-element1,overlay,surface1021.png,0,0
+element1,overlay,surface1013.png,0,0
 }
 
 surface903
@@ -301,7 +321,7 @@ element1,overlay,surface1023.png,0,0
 
 surface1002
 {
-element1,overlay,surface1021.png,0,0
+element1,overlay,surface1013.png,0,0
 }
 
 surface1003
