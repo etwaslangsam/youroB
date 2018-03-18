@@ -1,3 +1,4 @@
 ghost\master\dic_Menu.txt
 ghost\master\dic_Time.txt
 ghost\master\youroR\dic_Menu.txt
+ghost\master\youroW\dic_Menu.txt
