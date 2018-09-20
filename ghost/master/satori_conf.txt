@@ -18,6 +18,9 @@
 ＄TimeBell	OFF
 ＄初ローター	0
 ＄ローター	0
+＄時報設定	１
+＄自動アンカー	無効 
+＄ムスコ名	おちんぽ
 ＠SAORI
 calc,saori/ssu.dll,calc
 calc_float,saori/ssu.dll,calc_float

@@ -9,63 +9,44 @@
 ＠hidebutton.caption
 草陰に連れ込む
 
+＃────────
+＃おすすめ
+＃────────
 ＊sakura.recommendsites
+-
+
+＃────────
+＃ポータルサイト
+＃────────
+＠portalrootbutton.caption
 配布サイト
+
+
+＊sakura.portalsites
+ほっとぺっぱぁ団
 http://ghosthacking.webcrow.jp/index.html
 
 
-＊sakura.recommendsites
-バグ報告
+＊sakura.portalsites
+連絡フォーム
 https://goo.gl/forms/qJhnaKjUfVtcOWSk1
 
 
-＊sakura.recommendsites
+＊sakura.portalsites
 web拍手
 script:\![open,inputbox,拍手送信内容,-1,いいね！,--limit=1000]
 
+＃────────
+＃単語群
+＃────────
+＠時間帯
+（whenlist,（現在時）<,5,深夜,10,朝,16,昼,19,夕方,23,夜,深夜）
+＠曜日
+（whenlist,（現在曜日）==,土,休日,日,休日,平日）
+＠季節
+（whenlist,（現在月）<,3,冬,6,春,7,梅雨,9,夏,12,秋,冬）
 
-
-
-＃＊sakura.portalsites
-＃-
-＃「-」といれることでリンクメニューに罫線を引くことができます。 
-
-＊sakura.portalsites
-SSPのバグ報告はこちら
-
-
-＊sakura.portalsites
-SSP BUGTRAQ 
-http://ssp.shillest.net/ 
-
-
-＊sakura.portalsites
-ゴースト探すなら
-
-
-＊sakura.portalsites
-GHOST TOWN
-http://ghosttown.mikage.jp/
-
-＊sakura.portalsites
-総合情報サイト
-
-
-＊sakura.portalsites
-Disc-2 
-http://disc2.s56.xrea.com/ 
-
-
-＊sakura.portalsites
-Uka-Ni-Sphere
-http://www.ghost.sakura.tv/index.html
-
-
-＊sakura.portalsites
-ゴーストの感想などは
-
-
-＊sakura.portalsites
-ゴースト回覧板３ｒｄ
-http://jbbs.shitaraba.net/computer/44300/
-
+＠痙攣
+（times、5、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+＠痙攣２
+（times、3、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
