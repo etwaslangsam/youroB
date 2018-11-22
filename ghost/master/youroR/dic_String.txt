@@ -1,65 +1,48 @@
-ネットワーク更新・メニューURLなど
 
+＃────────
+＃■Resources
+＃────────
 ＠homeurl
 https://raw.githubusercontent.com/etwaslangsam/youroB/master/
 
 ＠shellrootbutton.caption
 キャラクター変更
 
+＠sakura.portalbuttoncaption
+配布サイト
+
+＃────────
+＃■お気に入り
+＃────────
 ＊sakura.recommendsites
 -
 
-＃＊sakura.portalsites
-＃-
-＃「-」といれることでリンクメニューに罫線を引くことができます。 
-
+＃────────
+＃■ポータル
+＃────────
 ＊sakura.portalsites
-SSPのバグ報告はこちら
-
-
-＊sakura.portalsites
-SSP BUGTRAQ 
-http://ssp.shillest.net/ 
+ほっとぺっぱぁ団
+http://ghosthacking.webcrow.jp/index.html
 
 
 ＊sakura.portalsites
-ゴースト探すなら
+連絡フォーム
+https://goo.gl/forms/qJhnaKjUfVtcOWSk1
 
-
-＊sakura.portalsites
-GHOST TOWN
-http://ghosttown.mikage.jp/
-
-＊sakura.portalsites
-総合情報サイト
-
-
-＊sakura.portalsites
-Disc-2 
-http://disc2.s56.xrea.com/ 
-
-
-＊sakura.portalsites
-Uka-Ni-Sphere
-http://www.ghost.sakura.tv/index.html
-
-
-＊sakura.portalsites
-ゴーストの感想などは
-
-
-＊sakura.portalsites
-ゴースト回覧板３ｒｄ
-http://jbbs.shitaraba.net/computer/44300/
 
 ＃────────
 ＃単語群
 ＃────────
+＠出てくる
+\s[0]はぁ――（はーと）\w5 はぁ――（はーと）\w9\n危なかった・・・けど、すごいドキドキしちゃった（はーと）
+\s[304]やっぱり、こんなこと止めなきゃ駄目だよね。\w5\n\s[402]でも・・・も、もうちょっとだけ・・・。
+
 ＠痙攣
 （times、4、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
-
 ＠ピク
 （times、1、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
-
 ＠ピクピク
 （times、2、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+
+＠曜日
+（whenlist,（現在曜日）==,土,休日,日,休日,平日）

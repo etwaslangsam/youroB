@@ -1,69 +1,150 @@
-一般的なイベント対応
 
 ＃────────
-＃最小化解除
+＃■マウスイベント
+＃────────
+＊OnMouseDoubleClick
+＞（Reference3）（Reference4）つつかれ	（Reference5）==0
+
+＊OnMouseHover
+＄（Reference3）（Reference4）見つめタイマ	５
+
+＊OnMouseLeave
+＄（Reference3）（Reference4）見つめタイマ	
+
+＊OnMouseLeaveAll
+
+＃────────
+＃■最小化解除
 ＃────────
 ＊OnWindowStateRestore
-＞出てくる
+\0（出てくる）\e
 
 ＃────────
-＃インストール
+＃■表情復帰
 ＃────────
+＊OnSurfaceRestore
+\0（when,（Reference0）==-1,（出てくる））\e
+
+＃────────
+＃シェル変更
+＃────────
+＊OnShellChanging
+\0（なでられ）
+（whenlist、（Reference0）==
+、ゆい、（set,辞書フォルダ,.）
+、みこと、（set,辞書フォルダ,youroW）
+、ような、（set,辞書フォルダ,youroV）
+）\e
+
+＊OnShellChanged
+\0（起動）\e
+
+＃────────
+＃■インストール
+＃────────
+＊OnInstallBegin
+\0\s[304]あれ・・・？\w5
+なにか、落ちてる・・・。
+\e
+
 ＊OnInstallComplete
-：(（replace（バイト値,１）（Reference1）（バイト値,１）\（バイト値,１）\\）インストール)
+\0（whenlist,（Reference0）==
+,shell,\s[301]えっ！？\w9\s[302]\cこ、これって・・・なんでこんなものが学校に・・・？
+,ghost,\s[402]名札だ・・・。\w5\n（replace（バイト値,１）（Reference1）（バイト値,１）\（バイト値,１）\\）？\n\nどこのクラスの子だろう・・・。
+,\s[306]なんだろう、これ・・・？
+）
+\e
+
+＊OnInstallFailure
+\0\s[403]（Reference0）・・・？\w5
+ち、近寄らないでおこっ・・・。
+\e
 
 ＃────────
-＃ダウンロード
+＃■ダウンロード
 ＃────────
+＊OnURLDropping
+\0\s[400]こ、ここでダウンロードしてみちゃお・・・。\w5\e
+
 ＊OnURLDropped
-：(ダウンロード)
+\0\s[310]は、ぁ・・・（はーと）\w5
+す・・・っごい・・・。
+
+私、こんなところでダウンロードしちゃってる・・・。
+\e
 
 ＃────────
-＃ネットワーク更新
+＃■ネットワーク更新
 ＃────────
 ＊OnUpdateBegin
-：(ネットワーク更新開始)
+\0\s[304]ネットワーク更新・・・。\e
 
 ＊OnUpdateReady
-：(（Reference0）個の更新ファイルがあります)
+\0\s[304]（Reference0）個の更新があるんだ・・・。\e
+
+＊OnUpdate.OnMD5CompareBegin
+\0\s[304]えっと・・・\_q
+（Reference0）
+
+あっち （Reference1）
+こっち （Reference2）
+\_q
+
+＊OnUpdate.OnMD5CompareFailure
+\0\s[403]あ、あれ・・・？\e
+
 
 ＊OnUpdateComplete
-：（whenlist,（Reference0）==
-,none,更新はありません
-,changed,更新完了
+\0（whenlist、（Reference0）==
+、none、\s[308]更新・・・ないんだ・・・。\w5\n残念・・・。
+、changed、\s[402]更新・・・しちゃった・・・（はーと）
 ）
+\e
 
 ＊OnUpdateFailure
-：(（Reference0）エラー)
+\0\s[311]（Reference0）で失敗なんて・・・そんな・・・。
+\e
 
 ＃────────
-＃ファイル作成
+＃■ファイル作成
 ＃────────
 ＊OnUpdatedataCreating
-：
+\0\s[402]は、裸で更新ファイル作っちゃお・・・（はーと）\w5\e
 
 ＊OnUpdatedataCreated
-：(完了)
+\0\s[310]はぁあ・・・気持ちよかった（はーと）\e
 
 ＊OnNarCreating
-：
+\0\s[308]Narファイルの作成・・・。\w5\e
 
 ＊OnNarCreated
-：(完了)
+\0\s[400]作っちゃった・・・Narファイル・・・。\e
 
 ＃────────
-＃キー押下
+＃■キー押下
 ＃────────
 ＊OnKeyPress
-＞（Reference0）が押された
+（whenlist,1==
+,（compare、（Reference0）、t）,（）
+,（compare、（Reference0）、m）,（メインメニュー）
+,（compare、（Reference0）、r）,（set、辞書リロード、実行）\0(リロード)\e
+,（compare、（Reference0）、s）,（ステータス表示）
+）
+\e
 
-＊tが押された
-（）
+＊ステータス表示
+：\s[0]\_qφ*簡易ステータスφ*\n[half]
+トーク数　（countNoNameTalk）\n[half]
+喋り頻度　（喋り間隔）\n[half]
+目的地　【（目的地）】\n[half]
+現在地　【（現在地）】\n[half]
+残り移動距離　（移動距離）\n[half]
+今日は（曜日）
+\_q
 
-＊rが押された
-＄辞書リロード	実行
-：(リロード)
-
+＃────────
+＃■インプット
+＃────────
 ＊OnUserInput
 ＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
 ＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
@@ -74,21 +155,7 @@
 ＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
 
 ＃────────
-＃シェル変更
-＃────────
-＊OnShellChanging
-（なでられ）
-（whenlist、（Reference0）==
-、ゆい、（set,辞書フォルダ,.）
-、みこと、（set,辞書フォルダ,youroW）
-、ような、（set,辞書フォルダ,youroV）
-）
-
-＊OnShellChanged
-＞起動
-
-＃────────
-＃選択肢
+＃■選択肢
 ＃────────
 ＊OnAnchorSelectEx
 ＄選択ラベル	（Reference0）
@@ -100,14 +167,30 @@
 ＞（Reference0）
 
 ＃────────
-＃表情復帰
+＃時間イベント
 ＃────────
-＊OnSurfaceRestore
-＞出てくる	（サーフェス0）==-1
+＊OnMinuteChange
+＞時報	（現在分）==0
 
-＊出てくる
-：\s[0]はぁ――（はーと） はぁ――（はーと）\w9
-……すごいドキドキしちゃった（はーと）
+＊時報	（TimeBell）==ON
+\1（現在時）時になりました。\e
 
-＊出てくる
-：\s[304]やっぱり、こんなこと止めなきゃ駄目だよね。
+＃────────
+＃■web拍手
+＃────────
+＊OnWebClap
+\![open,inputbox,拍手送信内容,-1,いいね！,--limit=1000]
+\0\s[401]メッセージ・・・。\e
+
+＊拍手送信内容を教えてもらった
+\![execute,http-post,http://clap.webclap.com/clap.php?id=etwaslangsam,--param=message_body="つきね＠（拍手送信内容）",--async=webclap]
+＄拍手送信内容	
+
+＊拍手送信内容を空打ちされた
+：\_q(キャンセルしました)\_q
+
+＊OnExecuteHTTPComplete	（Reference1）==webclap
+\0\s[402]よし・・・と。\e
+
+＊OnExecuteHTTPFailure	（Reference1）==webclap
+\0\s[311]（Reference4）で失敗・・・。\e
