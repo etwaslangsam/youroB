@@ -1,4 +1,3 @@
-
 ＃────────
 ＃■マウスイベント
 ＃────────
@@ -14,76 +13,96 @@
 ＊OnMouseLeaveAll
 
 ＃────────
+＃時間イベント
+＃────────
+＊OnMinuteChange
+
+＃────────
 ＃■最小化解除
 ＃────────
 ＊OnWindowStateRestore
-\0（出てくる）\e
+＞出てくる
 
 ＃────────
 ＃■表情復帰
 ＃────────
 ＊OnSurfaceRestore
-\0（when,（Reference0）==-1,（出てくる））\e
+\e
 
 ＃────────
 ＃シェル変更
 ＃────────
 ＊OnShellChanging
 \0（なでられ）
-（whenlist、（Reference0）==
-、ゆい、（set,辞書フォルダ,.）
-、みこと、（set,辞書フォルダ,youroW）
-、ような、（set,辞書フォルダ,youroV）
-）\e
+＞（Reference0）に着替える
+
+＊ゆいに着替える
+＄辞書フォルダ	.
+
+＊みことに着替える
+＄辞書フォルダ	youroW
+
+＊ようなに着替える
+＄辞書フォルダ	youroV
 
 ＊OnShellChanged
-\0（起動）\e
+＞起動
+\e
 
 ＃────────
 ＃■インストール
 ＃────────
 ＊OnInstallBegin
-\0\s[304]あれ・・・？\w5
-なにか、落ちてる・・・。
+\0\s[304]あれ……？\w5
+なにか、落ちてる……。
 \e
 
 ＊OnInstallComplete
-\0（whenlist,（Reference0）==
-,shell,\s[301]えっ！？\w9\s[302]\cこ、これって・・・なんでこんなものが学校に・・・？
-,ghost,\s[402]名札だ・・・。\w5\n（replace（バイト値,１）（Reference1）（バイト値,１）\（バイト値,１）\\）？\n\nどこのクラスの子だろう・・・。
-,\s[306]なんだろう、これ・・・？
-）
+＞（Reference0）をインストール
+\0\s[306]なんだろう、これ……？
+\e
+
+＊shellをインストール
+\0\s[301]えっ！？\w9
+\s[302]\cこ、これって……なんでこんなものが学校に……？
+\e
+
+＊ghostをインストール
+\0\s[402]名札だ……。\w5
+
+（replace（バイト値,１）（Reference1）（バイト値,１）\（バイト値,１）\\）？
+どこのクラスの子だろう。
 \e
 
 ＊OnInstallFailure
-\0\s[403]（Reference0）・・・？\w5
-ち、近寄らないでおこっ・・・。
+\0\s[403]（Reference0）……？\w5
+ち、近寄らないでおこっ……。
 \e
 
 ＃────────
 ＃■ダウンロード
 ＃────────
 ＊OnURLDropping
-\0\s[400]こ、ここでダウンロードしてみちゃお・・・。\w5\e
+\0\s[400]こ、ここでダウンロードしてみちゃお……。\w5\e
 
 ＊OnURLDropped
-\0\s[310]は、ぁ・・・（はーと）\w5
-す・・・っごい・・・。
+\0\s[310]は、ぁ……（はーと）\w5
+す……っごい……。
 
-私、こんなところでダウンロードしちゃってる・・・。
+私、こんなところでダウンロードしちゃってる……。
 \e
 
 ＃────────
 ＃■ネットワーク更新
 ＃────────
 ＊OnUpdateBegin
-\0\s[304]ネットワーク更新・・・。\e
+\0\s[304]ネットワーク更新……。\e
 
 ＊OnUpdateReady
-\0\s[304]（Reference0）個の更新があるんだ・・・。\e
+\0\s[304]（Reference0）個の更新があるんだ……。\e
 
 ＊OnUpdate.OnMD5CompareBegin
-\0\s[304]えっと・・・\_q
+\0\s[304]えっと……\_q
 （Reference0）
 
 あっち （Reference1）
@@ -91,56 +110,47 @@
 \_q
 
 ＊OnUpdate.OnMD5CompareFailure
-\0\s[403]あ、あれ・・・？\e
+\0\s[403]あ、あれ……？\e
 
 
 ＊OnUpdateComplete
 \0（whenlist、（Reference0）==
-、none、\s[308]更新・・・ないんだ・・・。\w5\n残念・・・。
-、changed、\s[402]更新・・・しちゃった・・・（はーと）
+、none、\s[308]更新……ないんだ……。\w5\n残念……。
+、changed、\s[402]更新……しちゃった……（はーと）
 ）
 \e
 
 ＊OnUpdateFailure
-\0\s[311]（Reference0）で失敗なんて・・・そんな・・・。
+\0\s[311]（Reference0）で失敗なんて……そんな……。
 \e
 
 ＃────────
 ＃■ファイル作成
 ＃────────
 ＊OnUpdatedataCreating
-\0\s[402]は、裸で更新ファイル作っちゃお・・・（はーと）\w5\e
+\0\s[402]は、裸で更新ファイル作っちゃお……（はーと）\w5\e
 
 ＊OnUpdatedataCreated
-\0\s[310]はぁあ・・・気持ちよかった（はーと）\e
+\0\s[310]はぁあ……気持ちよかった（はーと）\e
 
 ＊OnNarCreating
-\0\s[308]Narファイルの作成・・・。\w5\e
+\0\s[308]Narファイルの作成……。\w5\e
 
 ＊OnNarCreated
-\0\s[400]作っちゃった・・・Narファイル・・・。\e
+\0\s[400]作っちゃった……Narファイル……。\e
 
 ＃────────
 ＃■キー押下
 ＃────────
 ＊OnKeyPress
-（whenlist,1==
-,（compare、（Reference0）、t）,（）
-,（compare、（Reference0）、m）,（メインメニュー）
-,（compare、（Reference0）、r）,（set、辞書リロード、実行）\0(リロード)\e
-,（compare、（Reference0）、s）,（ステータス表示）
-）
+＞（Reference0）が押された
 \e
 
-＊ステータス表示
-：\s[0]\_qφ*簡易ステータスφ*\n[half]
-トーク数　（countNoNameTalk）\n[half]
-喋り頻度　（喋り間隔）\n[half]
-目的地　【（目的地）】\n[half]
-現在地　【（現在地）】\n[half]
-残り移動距離　（移動距離）\n[half]
-今日は（曜日）
-\_q
+＊rが押された
+＄辞書リロード	実行
+\0リロード
+\e
+
 
 ＃────────
 ＃■インプット
@@ -150,37 +160,18 @@
 ＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
 ＄（Reference0）	（Reference1）
 ＞（Reference0）を教えてもらった
+\e
 
 ＊OnUserInputCancel
 ＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
-
-＃────────
-＃■選択肢
-＃────────
-＊OnAnchorSelectEx
-＄選択ラベル	（Reference0）
-＄選択ＩＤ	（Reference1）
-＞（Reference1）
-
-＊OnAnchorSelect
-＄選択ＩＤ	（Reference0）
-＞（Reference0）
-
-＃────────
-＃時間イベント
-＃────────
-＊OnMinuteChange
-＞時報	（現在分）==0
-
-＊時報	（TimeBell）==ON
-\1（現在時）時になりました。\e
+\e
 
 ＃────────
 ＃■web拍手
 ＃────────
 ＊OnWebClap
 \![open,inputbox,拍手送信内容,-1,いいね！,--limit=1000]
-\0\s[401]メッセージ・・・。\e
+\0\s[401]メッセージ……。\e
 
 ＊拍手送信内容を教えてもらった
 \![execute,http-post,http://clap.webclap.com/clap.php?id=etwaslangsam,--param=message_body="つきね＠（拍手送信内容）",--async=webclap]
@@ -190,7 +181,7 @@
 ：\_q(キャンセルしました)\_q
 
 ＊OnExecuteHTTPComplete	（Reference1）==webclap
-\0\s[402]よし・・・と。\e
+\0\s[402]よし……と。\e
 
 ＊OnExecuteHTTPFailure	（Reference1）==webclap
-\0\s[311]（Reference4）で失敗・・・。\e
+\0\s[311]（Reference4）で失敗……。\e

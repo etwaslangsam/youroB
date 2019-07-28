@@ -106,26 +106,65 @@
 ＃シェル変更
 ＃────────
 ＊OnShellChanging
-（whenlist、（Reference0）==
-、つきね、（set,辞書フォルダ,youroR）
-、みこと、（set,辞書フォルダ,youroW）
-、ような、（set,辞書フォルダ,youroV）
-）
-＞終了
+＄全タイマ解除	実行
+＄ローター	0
+\0（終了）
+＞（Reference0）に交代
+
+＊つきねに交代
+＄辞書フォルダ	youroR
+
+＊みことに交代
+＄辞書フォルダ	youroW
+
+＊ようなに交代
+＄辞書フォルダ	youroV
 
 ＊OnShellChanged
-＞起動
+＄ゆい起動回数＝（ゆい起動回数）+１
+＞ゆい調教完了	（ゆい起動回数）==10
+＞深夜起動	（現在時）＜４
+＞朝起動	（現在時）＜１０
+＞起動	（現在時）＜１６
+＞朝起動	（現在時）＜１８
+＞起動	（現在時）＜２３
+＞深夜起動
+\e
 
-＃────────────────
+＃────────
 ＃選択肢
-＃────────────────
-＊OnChoiceTimeout
-
-＊OnAnchorSelectEx
-＄選択ラベル	（Reference0）
-＄選択ＩＤ	（Reference1）
-＞（Reference1）
-
+＃────────
 ＊OnAnchorSelect
-＄選択ＩＤ	（Reference0）
 ＞（Reference0）
+\e
+
+＃────────
+＃web拍手
+＃────────
+＊OnWebClap
+：\![open,inputbox,拍手送信内容,-1,いいね！,--limit=1000]
+
+＊拍手送信内容を教えてもらった
+\![execute,http-post,http://clap.webclap.com/clap.php?id=etwaslangsam,--param=message_body="ゆい＠（拍手送信内容）",--async=webclap]
+＄拍手送信内容	
+
+＊拍手送信内容を空打ちされた
+：\_q(キャンセルしました)\_q
+
+＊拍手送信完了
+：\_q(送信完了しました)\_q
+
+＊拍手送信失敗
+：\_q(「（R4）」によって失敗しました)\_q
+
+＊OnExecuteHTTPComplete
+＞拍手送信完了	（R1）==webclap
+
+＊OnExecuteHTTPFailure
+＞拍手送信失敗	（R1）==webclap
+
+＃────────
+＃時間イベント
+＃────────
+＊OnMinuteChange
+＞見切れ	（Ｒ１）==1

@@ -4,10 +4,8 @@
 ＃────────
 ＠homeurl
 https://raw.githubusercontent.com/etwaslangsam/youroB/master/
-
 ＠shellrootbutton.caption
 キャラクター変更
-
 ＠sakura.portalbuttoncaption
 配布サイト
 
@@ -21,22 +19,23 @@ https://raw.githubusercontent.com/etwaslangsam/youroB/master/
 ＃■ポータル
 ＃────────
 ＊sakura.portalsites
-ほっとぺっぱぁ団
+配布元
 http://ghosthacking.webcrow.jp/index.html
 
 
 ＊sakura.portalsites
-連絡フォーム
+連絡先
 https://goo.gl/forms/qJhnaKjUfVtcOWSk1
+
+
+＊sakura.portalsites
+ご意見φ・ご要望
+script:\![raise,OnWebClap,ご意見φ・ご要望]
 
 
 ＃────────
 ＃単語群
 ＃────────
-＠出てくる
-\s[0]はぁ――（はーと）\w5 はぁ――（はーと）\w9\n危なかった・・・けど、すごいドキドキしちゃった（はーと）
-\s[304]やっぱり、こんなこと止めなきゃ駄目だよね。\w5\n\s[402]でも・・・も、もうちょっとだけ・・・。
-
 ＠痙攣
 （times、4、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
 ＠ピク
