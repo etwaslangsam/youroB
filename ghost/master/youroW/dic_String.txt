@@ -1,4 +1,3 @@
-ネットワーク更新・メニューURLなど
 
 ＠shellrootbutton.caption
 キャラクター変更
