@@ -1,3 +1,29 @@
+＃────────
+＃
+＃────────
+＊OnSurfaceRestore
+\0\s[201]\e
+
+＃────────
+＃マウス
+＃────────
+＊OnMouseDoubleClick
+＄（Reference3）（Reference4）見つめタイマ	
+＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
+
+＊OnMouseWheel
+＄（Reference3）（Reference4）見つめタイマ	
+＞（Reference3）（Reference4）上ころ	（Reference2）>0
+＞（Reference3）（Reference4）下ころ	（Reference2）<0
+＞（Reference3）（Reference4）ころころ
+
+＊OnMouseDragStart
+＞（Reference3）移動＊OnMouseDoubleClick
+＄（Reference3）（Reference4）見つめタイマ	
+＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
+
+＊0移動
+\0\s[204]あっ・・・どこへ、連れて行くんですの？\e
 
 ＃────────
 ＃最小化解除
@@ -140,19 +166,16 @@
 ＄辞書リロード	実行
 \0\s[201]リロードしました（はーと）
 
-＊sが押された
-\0\_q\s[0]ランダムトークφ\0（countNoNameTalk）個\_q
-
 ＃────────
 ＃インプット
 ＃────────
 ＊OnUserInput
-＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
 ＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
 ＄（Reference0）	（Reference1）
 ＞（Reference0）を教えてもらった
 
 ＊OnUserInputCancel
+＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
 ＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
 
 ＃────────
@@ -185,31 +208,3 @@
 
 ＊OnAnchorSelect
 ＞（Reference0）
-
-＃────────
-＃web拍手
-＃────────
-＊OnWebClap
-\0\![open,inputbox,拍手送信内容,-1,いいね！,--limit=1000]
-
-＊拍手送信内容を教えてもらった
-\![execute,http-post,http://clap.webclap.com/clap.php?id=etwaslangsam,--param=message_body="みこと＠（拍手送信内容）",--async=webclap]
-＄拍手送信内容	
-
-＊拍手送信内容を空打ちされた
-\0\_q(キャンセルしました)\_q
-
-＊拍手送信完了
-\0\_q(送信完了しました)\_q
-
-＊拍手送信失敗
-\0\_q(「（R4）」によって失敗しました)\_q
-
-＊OnExecuteHTTPComplete
-＞拍手送信完了	（R1）==webclap
-
-＊OnExecuteHTTPFailure
-＞拍手送信失敗	（R1）==webclap
-
-＊なんでもないよ
-\0\e
