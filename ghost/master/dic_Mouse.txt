@@ -1,17 +1,3 @@
-＃────────
-＃マウス反応
-＃────────
-＊OnMouseDoubleClick
-＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
-
-＊OnMouseHover
-＄（Reference3）（Reference4）見つめタイマ	３
-
-＊OnMouseLeave
-＄（Reference3）（Reference4）見つめタイマ	
-
-＊OnMouseLeaveAll
-＄全タイマ解除	実行
 
 ＊0なでられ	（ゆい陥落）==0
 ：\s[101]あ、あぁ…………\w9\w6

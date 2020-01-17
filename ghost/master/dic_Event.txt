@@ -1,108 +1,4 @@
 ＃────────
-＃サーフェス復元
-＃────────
-＊OnSurfaceRestore
-＞出てくる	（サーフェス0）==-1
-\1\s[-1]\0\s[0]
-
-＊出てくる	（ゆい陥落）==0
-：\s[102]人が来てるなら教えなさいよ！！\w9\w6
-どうしてくれるのよ、このバカ！！
-
-＊出てくる
-：\s[109]見られちゃった……（when,（ゆい陥落）==1,\s[108]ふふふ（はーと））
-
-＊出てくる
-：\s[106](さっきの人、すごいビックリしてた……)
-
-＊出てくる
-：（陥落表情）はぁ――（陥落語尾） はぁ――（陥落語尾）
-
-＃────────
-＃最小化解除
-＃────────
-＊OnWindowStateRestore
-＞出てくる
-
-＃────────
-＃インストール
-＃────────
-＊OnInstallComplete
-：(（replace（バイト値,１）（Reference1）（バイト値,１）\（バイト値,１）\\）インストール)
-
-＃────────
-＃ダウンロード
-＃────────
-＊OnURLDropped
-：(ダウンロード)
-
-＃────────
-＃ネットワーク更新
-＃────────
-＊OnUpdateBegin
-：(ネットワーク更新開始)
-
-＊OnUpdateReady
-：(（Reference0）個の更新ファイルがあります)
-
-＊OnUpdateComplete
-：（whenlist,（Reference0）==
-,none,更新はありません
-,changed,更新完了
-）
-
-＊OnUpdateFailure
-：(（Reference0）エラー)
-
-
-＃────────
-＃ファイル作成
-＃────────
-＊OnUpdatedataCreating
-：
-
-＊OnUpdatedataCreated
-：(完了)
-
-＊OnNarCreating
-：
-
-＊OnNarCreated
-：(完了)
-
-
-＃────────
-＃キー押下
-＃────────
-＊OnKeyPress
-＞（Reference0）が押された
-
-＊tが押された
-（）
-
-＊rが押された
-＄辞書リロード	実行
-\0\s[107]リロードしたわ。
-
-＊mが押された
-＞メインメニュー
-
-＊sが押された
-\0\s[0]ランダムトーク数φ：（countNoNameTalk）
-
-＃────────
-＃ユーザ入力
-＃────────
-＊OnUserInput
-＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
-＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
-＄（Reference0）	（Reference1）
-＞（Reference0）を教えてもらった
-
-＊OnUserInputCancel
-＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
-
-＃────────
 ＃シェル変更
 ＃────────
 ＊OnShellChanging
@@ -129,17 +25,186 @@
 ＞朝起動	（現在時）＜１８
 ＞起動	（現在時）＜２３
 ＞深夜起動
-\e
+
+＃────────
+＃最小化解除
+＃────────
+＊OnWindowStateRestore
+＞出てくる
+
+＊出てくる	（ゆい陥落）==0
+\0\s[102]人が来てるなら教えなさいよ！！\w9\w6
+どうしてくれるのよ、このバカ！！
+
+＊出てくる
+\0\s[109]見られちゃった……（when,（ゆい陥落）==1,\s[108]ふふふ（はーと））
+
+＊出てくる
+\0\s[106](さっきの人、すごいビックリしてた……)
+
+＊出てくる
+\0（陥落表情）はぁ――（陥落語尾） はぁ――（陥落語尾）
+
+＃────────
+＃ユーザ入力
+＃────────
+＊OnUserInput
+＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
+＄（Reference0）	（Reference1）
+＞（Reference0）を教えてもらった
+
+＊OnUserInputCancel
+＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
+＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
 
 ＃────────
 ＃選択肢
 ＃────────
+＊OnAnchorSelectEx
+＄選択ＩＤ	（Reference1）
+＄選択ラベル	（Reference0）
+＞（Reference1）
+＞ジャンプ先がない
+
 ＊OnAnchorSelect
+＄選択ＩＤ	（Reference0）
 ＞（Reference0）
-\e
+＞ジャンプ先がない
+
+＊OnChoiceSelectEx
+＄選択ＩＤ	（Reference1）
+＄選択ラベル	（Reference0）
+＞（Reference1）
+＞ジャンプ先がない
+
+＊OnChoiceSelect
+＄選択ＩＤ	（Reference0）
+＞（Reference0）
+＞ジャンプ先がない
+
+＊ジャンプ先がない
+\0φ（選択肢エラーφ）\e
 
 ＃────────
 ＃時間イベント
 ＃────────
-＊OnMinuteChange
-＞見切れ	（Ｒ１）==1
+
+＃────────
+＃サーフェス復元
+＃────────
+＊OnSurfaceRestore
+＞出てくる	（サーフェス0）==-1
+\1\s[-1]\0\s[0]
+
+＃────────
+＃マウス反応
+＃────────
+＊OnMouseDoubleClick
+＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
+
+＊OnMouseHover
+＄（Reference3）（Reference4）見つめタイマ	１
+
+＊OnMouseEnterAll	（Status）!=talking
+\0\s[109]
+
+＊OnMouseLeave
+＄（Reference3）（Reference4）見つめタイマ	
+
+＊OnMouseLeaveAll
+＄全タイマ解除	実行
+
+＃────────
+＃インストール
+＃────────
+＊OnInstallBegin
+\0φ（インストールを開始しますφ）\e
+
+＊OnInstallComplete
+\0φ（『（replace（バイト値,１）（Reference1）（バイト値,１）\（バイト値,１）\\）』インストールφ）\e
+
+＊OnInstallFailure
+\0φ（インストール失敗φ）\e
+
+＊OnInstallRefuse
+\0（『（replace（バイト値,１）（Reference0）（バイト値,１）\（バイト値,１）\\）』専用ですφ）\e
+
+＃────────
+＃ファイル作成
+＃────────
+＊OnUpdatedataCreating
+
+＊OnUpdatedataCreated
+\0φ（完了φ）\e
+
+＊OnNarCreating
+
+＊OnNarCreated
+\0φ（完了φ）\e
+
+＃────────
+＃ダウンロード
+＃────────
+＊OnURLDropped
+\0φ（ダウンロード完了φ）\e
+
+＃────────
+＃ネットワーク更新
+＃────────
+＊OnUpdateBegin
+\0(ネットワーク更新開始)
+
+＊OnUpdateReady
+\0(（Reference0）個の更新ファイルがあります)
+
+＊OnUpdateComplete
+＞更新（Reference0）
+
+＊更新none
+\0\e
+＊更新changed
+\0φ（更新成功φ）\e
+
+＊OnUpdateFailure
+＞更新（Reference0）
+
+＊更新timeout
+\0φ（タイムアウト 時間を置いて試してみて下さいφ）\e
+＊更新md5 miss
+\0φ（MD5不一致 作者にご連絡下さいφ）\e
+＊更新404
+\0φ（404エラー サーバが見つかりませんφ）\e
+＊更新artificial
+\0φ（中断しますφ）\e
+
+＃────────
+＃時計合わせ
+＃────────
+＊OnSNTPBegin
+\0（Reference0）\e
+
+＊OnSNTPCompare
+\6
+
+＊OnSNTPCorrect
+\0φ（合わせましたφ）\e
+
+＊OnSNTPFailure
+\0φ（接続エラーφ）\e
+
+＃────────
+＃キー押下
+＃────────
+＊OnKeyPress
+＞（Reference0）が押された
+
+＊tが押された
+（）
+
+＊rが押された
+＄辞書リロード	実行
+\0\s[107]リロードしたわ。
+
+＊mが押された
+＞メインメニュー
+
