@@ -108,7 +108,7 @@
 ＊OnShellChanging
 ＄全タイマ解除	実行
 ＄ローター	0
-\0（終了）
+\0（when,（ゆい陥落）==1,（陥落終了）,（終了））
 ＞（Reference0）に交代
 
 ＊つきねに交代
@@ -137,31 +137,6 @@
 ＊OnAnchorSelect
 ＞（Reference0）
 \e
-
-＃────────
-＃web拍手
-＃────────
-＊OnWebClap
-：\![open,inputbox,拍手送信内容,-1,いいね！,--limit=1000]
-
-＊拍手送信内容を教えてもらった
-\![execute,http-post,http://clap.webclap.com/clap.php?id=etwaslangsam,--param=message_body="ゆい＠（拍手送信内容）",--async=webclap]
-＄拍手送信内容	
-
-＊拍手送信内容を空打ちされた
-：\_q(キャンセルしました)\_q
-
-＊拍手送信完了
-：\_q(送信完了しました)\_q
-
-＊拍手送信失敗
-：\_q(「（R4）」によって失敗しました)\_q
-
-＊OnExecuteHTTPComplete
-＞拍手送信完了	（R1）==webclap
-
-＊OnExecuteHTTPFailure
-＞拍手送信失敗	（R1）==webclap
 
 ＃────────
 ＃時間イベント
