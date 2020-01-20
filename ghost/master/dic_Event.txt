@@ -100,13 +100,13 @@
 ＃マウス反応
 ＃────────
 ＊OnMouseDoubleClick
-＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
+＞（Reference3）（Reference4）つつかれ	（Reference5）==0
 
 ＊OnMouseHover
 ＄（Reference3）（Reference4）見つめタイマ	１
 
 ＊OnMouseEnterAll	（Status）!=talking
-\0\s[109]
+\0\s[109]\e
 
 ＊OnMouseLeave
 ＄（Reference3）（Reference4）見つめタイマ	
@@ -127,7 +127,7 @@
 \0φ（インストール失敗φ）\e
 
 ＊OnInstallRefuse
-\0（『（replace（バイト値,１）（Reference0）（バイト値,１）\（バイト値,１）\\）』専用ですφ）\e
+\0φ（（replace（バイト値,１）（Reference0）（バイト値,１）\（バイト値,１）\\）専用ですφ）\e
 
 ＃────────
 ＃ファイル作成
@@ -198,12 +198,13 @@
 ＊OnKeyPress
 ＞（Reference0）が押された
 
-＊tが押された
-（）
-
 ＊rが押された
 ＄辞書リロード	実行
-\0\s[107]リロードしたわ。
+＄手動セーブ	実行
+\0φ（リロードφ）\e
+
+＊tが押された
+（）
 
 ＊mが押された
 ＞メインメニュー
