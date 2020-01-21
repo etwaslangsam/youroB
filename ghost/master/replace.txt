@@ -1,2 +1,5 @@
 ……	\w3…\w3…\w3
 ！！	!!
+（痙攣）	（times、5、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+（ピク）	（times、1、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+（ピクピク）	（times、2、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
