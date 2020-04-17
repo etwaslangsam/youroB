@@ -4,9 +4,6 @@ name,‚Â‚«‚Ë
 
 type,shell
 
-sakura.name,‚v
-kero.name,‚o
-
 sakura.balloon.offsetx,70
 sakura.balloon.offsety,30
 kero.balloon.offsetx,70
