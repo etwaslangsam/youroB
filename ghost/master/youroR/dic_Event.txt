@@ -1,53 +1,29 @@
-＃────────
-＃■マウスイベント
-＃────────
-＊OnMouseDoubleClick
-＞（Reference3）（Reference4）つつかれ	（Reference5）==0
-
-＊OnMouseHover
-＄（Reference3）（Reference4）見つめタイマ	５
-
-＊OnMouseLeave
-＄（Reference3）（Reference4）見つめタイマ	
-
-＊OnMouseLeaveAll
-
-＃────────
-＃時間イベント
-＃────────
-＊OnMinuteChange
-
-＃────────
-＃■最小化解除
-＃────────
-＊OnWindowStateRestore
-＞出てくる
-
-＃────────
-＃■表情復帰
-＃────────
-＊OnSurfaceRestore
-\e
+＊OnCacheRestore
+＞OnSatoriLoad
+＊OnSatoriLoad
+＄文「＊」の重複回避	有効、起動中
+＄単語群「＊」の重複回避	有効、起動中
+＄自動挿入ウェイトタイプ	一般
+＄辞書フォルダ	youroR,Common
+＄手動セーブ	実行
 
 ＃────────
 ＃シェル変更
 ＃────────
-＊OnShellChanging
-\0（0なでられ）
-＞（Reference0）に着替える
-
 ＊ゆいに着替える
-＄辞書フォルダ	.
+\0（0なでられ）
+＄辞書フォルダ	.,Common
 
 ＊みことに着替える
-＄辞書フォルダ	youroW
+\0（0なでられ）
+＄辞書フォルダ	youroW,Common
 
 ＊ようなに着替える
-＄辞書フォルダ	youroV
+\0（0なでられ）
+＄辞書フォルダ	youroV,Common
 
 ＊OnShellChanged
 ＞起動
-\e
 
 ＃────────
 ＃■インストール
@@ -113,16 +89,17 @@
 \0\s[403]あ、あれ……？\e
 
 
-＊OnUpdateComplete
-\0（whenlist、（Reference0）==
-、none、\s[308]更新……ないんだ……。\w5\n残念……。
-、changed、\s[402]更新……しちゃった……（はーと）
-）
-\e
+＊更新成功
+＄辞書フォルダ	youroR,Common
+＄辞書リロード	実行
+\0\s[402]更新……しちゃった……（はーと）\e
+
+＊更新なし
+\0\s[308]更新……ないんだ……。\w5
+残念……。\e
 
 ＊OnUpdateFailure
-\0\s[311]（Reference0）で失敗なんて……そんな……。
-\e
+\0\s[311]（Reference0）で失敗なんて……そんな……。\e
 
 ＃────────
 ＃■ファイル作成
@@ -138,33 +115,6 @@
 
 ＊OnNarCreated
 \0\s[400]作っちゃった……Narファイル……。\e
-
-＃────────
-＃■キー押下
-＃────────
-＊OnKeyPress
-＞（Reference0）が押された
-\e
-
-＊rが押された
-＄辞書リロード	実行
-\0リロード
-\e
-
-
-＃────────
-＃■インプット
-＃────────
-＊OnUserInput
-＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
-＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
-＄（Reference0）	（Reference1）
-＞（Reference0）を教えてもらった
-\e
-
-＊OnUserInputCancel
-＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
-\e
 
 ＃────────
 ＃■web拍手

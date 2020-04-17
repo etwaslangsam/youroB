@@ -1,20 +1,26 @@
+＊OnCacheRestore
+＞OnSatoriLoad
+＊OnSatoriLoad
+＄文「＊」の重複回避	有効、起動中
+＄単語群「＊」の重複回避	有効、起動中
+＄自動挿入ウェイトタイプ	一般
+＄辞書フォルダ	.,Common
+＄手動セーブ	実行
+
 ＃────────
 ＃シェル変更
 ＃────────
-＊OnShellChanging
-＄全タイマ解除	実行
-＄ローター	0
-\0（when,（ゆい陥落）==1,（陥落終了）,（終了））
-＞（Reference0）に交代
-
 ＊つきねに交代
-＄辞書フォルダ	youroR
+\0（when,（ゆい陥落）==1,（陥落終了）,（終了））
+＄辞書フォルダ	youroR,Common
 
 ＊みことに交代
-＄辞書フォルダ	youroW
+\0（when,（ゆい陥落）==1,（陥落終了）,（終了））
+＄辞書フォルダ	youroW,Common
 
 ＊ようなに交代
-＄辞書フォルダ	youroV
+\0（when,（ゆい陥落）==1,（陥落終了）,（終了））
+＄辞書フォルダ	youroV,Common
 
 ＊OnShellChanged
 ＄ゆい起動回数＝（ゆい起動回数）+１
@@ -29,9 +35,6 @@
 ＃────────
 ＃最小化解除
 ＃────────
-＊OnWindowStateRestore
-＞出てくる
-
 ＊出てくる	（ゆい陥落）==0
 \0\s[102]人が来てるなら教えなさいよ！！\w9\w6
 どうしてくれるのよ、このバカ！！
@@ -46,73 +49,16 @@
 \0（陥落表情）はぁ――（陥落語尾） はぁ――（陥落語尾）
 
 ＃────────
-＃ユーザ入力
-＃────────
-＊OnUserInput
-＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
-＄（Reference0）	（Reference1）
-＞（Reference0）を教えてもらった
-
-＊OnUserInputCancel
-＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
-＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
-
-＃────────
 ＃選択肢
 ＃────────
-＊OnAnchorSelectEx
-＄選択ＩＤ	（Reference1）
-＄選択ラベル	（Reference0）
-＞（Reference1）
-＞ジャンプ先がない
-
-＊OnAnchorSelect
-＄選択ＩＤ	（Reference0）
-＞（Reference0）
-＞ジャンプ先がない
-
-＊OnChoiceSelectEx
-＄選択ＩＤ	（Reference1）
-＄選択ラベル	（Reference0）
-＞（Reference1）
-＞ジャンプ先がない
-
-＊OnChoiceSelect
-＄選択ＩＤ	（Reference0）
-＞（Reference0）
-＞ジャンプ先がない
-
 ＊ジャンプ先がない
 \0φ（選択肢エラーφ）\e
 
 ＃────────
-＃時間イベント
-＃────────
-
-＃────────
-＃サーフェス復元
-＃────────
-＊OnSurfaceRestore
-＞出てくる	（サーフェス0）==-1
-\1\s[-1]\0\s[0]
-
-＃────────
 ＃マウス反応
 ＃────────
-＊OnMouseDoubleClick
-＞（Reference3）（Reference4）つつかれ	（Reference5）==0
-
-＊OnMouseHover
-＄（Reference3）（Reference4）見つめタイマ	１
-
-＊OnMouseEnterAll	（Status）!=talking
+＊0にカーソルイン
 \0\s[109]\e
-
-＊OnMouseLeave
-＄（Reference3）（Reference4）見つめタイマ	
-
-＊OnMouseLeaveAll
-＄全タイマ解除	実行
 
 ＃────────
 ＃インストール
@@ -157,13 +103,13 @@
 ＊OnUpdateReady
 \0(（Reference0）個の更新ファイルがあります)
 
-＊OnUpdateComplete
-＞更新（Reference0）
-
-＊更新none
-\0\e
-＊更新changed
+＊更新成功
+＄辞書フォルダ	.,Common
+＄辞書リロード	実行
 \0φ（更新成功φ）\e
+
+＊更新なし
+\0φ（更新なしφ）\e
 
 ＊OnUpdateFailure
 ＞更新（Reference0）
@@ -191,21 +137,3 @@
 
 ＊OnSNTPFailure
 \0φ（接続エラーφ）\e
-
-＃────────
-＃キー押下
-＃────────
-＊OnKeyPress
-＞（Reference0）が押された
-
-＊rが押された
-＄辞書リロード	実行
-＄手動セーブ	実行
-\0φ（リロードφ）\e
-
-＊tが押された
-（）
-
-＊mが押された
-＞メインメニュー
-

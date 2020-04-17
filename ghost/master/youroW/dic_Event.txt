@@ -1,36 +1,43 @@
-＃────────
-＃
-＃────────
-＊OnSurfaceRestore
-\0\s[201]\e
+＊OnCacheRestore
+＞OnSatoriLoad
+＊OnSatoriLoad
+＄文「＊」の重複回避	有効、起動中
+＄単語群「＊」の重複回避	有効、起動中
+＄自動挿入ウェイトタイプ	一般
+＄辞書フォルダ	youroW,Common
+＄手動セーブ	実行
 
 ＃────────
-＃マウス
+＃シェル変更
 ＃────────
-＊OnMouseDoubleClick
-＄（Reference3）（Reference4）見つめタイマ	
-＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
+＊ゆいへ切り替え
+＄辞書フォルダ	.,Common
+\0\s[201]うふふ、可愛いですわ（はーと）
 
-＊OnMouseWheel
-＄（Reference3）（Reference4）見つめタイマ	
-＞（Reference3）（Reference4）上ころ	（Reference2）>0
-＞（Reference3）（Reference4）下ころ	（Reference2）<0
-＞（Reference3）（Reference4）ころころ
+＊つきねへ切り替え
+＄辞書フォルダ	youroR,Common
+\0\s[201]（ユーザ名）。
+今度一緒に学校へ行ってみません？
 
-＊OnMouseDragStart
-＞（Reference3）移動＊OnMouseDoubleClick
-＄（Reference3）（Reference4）見つめタイマ	
-＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
+＊ようなへ切り替え
+＄辞書フォルダ	youroV,Common
 
+＊OnShellChanged
+＞OnFirstBoot	（みこと初回起動）==0
+＞深夜起動	（現在時）＜５
+＞朝起動	（現在時）＜１１
+＞昼起動	（現在時）＜１８
+＞夜起動
+
+＃────────
+＃マウスイベント
+＃────────
 ＊0移動
 \0\s[204]あっ・・・どこへ、連れて行くんですの？\e
 
 ＃────────
 ＃最小化解除
 ＃────────
-＊OnWindowStateRestore
-＞最小化解除
-
 ＊最小化解除
 \0\s[-1]（ユーザ名）っ（はーと）\w3 （ユーザ名）っ（times,2,（はーと））
 膣内にっ（はーと）\w3 膣内にザーメン射精してください（はーと）\w5\n
@@ -104,17 +111,16 @@
 \s[210]ああっ・・・そんな・・・奥まで・・・（はーと）
 \s[209]あっ・・・ダメです・・・動かさないで（はーと）
 
-＊OnUpdateComplete
-＞ネットワーク更新（Reference0）
-\0\s[7]あら・・・？\w5
-本来ならこのメッセージは表示されないはずなんですが・・・。
 
-＊ネットワーク更新none
+＊ネットワーク更新成功
+＄辞書フォルダ	youroW,Common
+＄辞書リロード	実行
+\0\s[201]ネットワーク更新、完了しました（はーと）\e
+
+＊ネットワーク更新なし
 \0\s[8]更新はないみたいですね。\w5
-\s[201]それじゃあ（ユーザ名）、続きをしましょう（はーと）
+\s[201]それじゃあ（ユーザ名）、続きをしましょう（はーと）\e
 
-＊ネットワーク更新changed
-\0\s[201]ネットワーク更新、完了しました（はーと）
 
 ＊OnUpdateFailure
 ＞ネットワーク更新（Reference0）
@@ -154,47 +160,11 @@
 \0\s[201]（Reference1）が出来ました（はーと）
 
 ＃────────
-＃キー押下
-＃────────
-＊OnKeyPress
-＞（Reference0）が押された
-
-＊tが押された
-（）
-
-＊rが押された
-＄辞書リロード	実行
-\0\s[201]リロードしました（はーと）
-
-＃────────
-＃インプット
-＃────────
-＊OnUserInput
-＞（Reference0）を空打ちされた	（is_empty（バイト値,１）（Reference1））
-＄（Reference0）	（Reference1）
-＞（Reference0）を教えてもらった
-
-＊OnUserInputCancel
-＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
-＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
-
-＃────────
 ＃時間イベント
 ＃────────
-＊OnMinuteChange
-＞見切れ	（Reference1）==1
-
-
 ＊見切れ
 \0\s[205]ふふふ。\w6
 物陰に連れ込んで、どうするおつもりですか？
-
-
-＊OnHourTimeSignal
-＞時報	（時報設定）==１
-
-＊時報
-\0（現在時）時です。\e
 
 ＃────────
 ＃選択肢
@@ -202,9 +172,3 @@
 ＊OnChoiceTimeout
 \0\s[210]放置プレイだなんてそんな・・・\w6
 \s[201]酷いですわ、（ユーザ名）（はーと）
-
-＊OnAnchorSelectEx
-＞（Reference1）
-
-＊OnAnchorSelect
-＞（Reference0）

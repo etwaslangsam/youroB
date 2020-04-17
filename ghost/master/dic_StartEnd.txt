@@ -1,17 +1,3 @@
-＊OnCacheRestore
-＞OnSatoriLoad
-＊OnSatoriLoad
-＄文「＊」の重複回避	有効、起動中
-＄単語群「＊」の重複回避	有効、起動中
-＄自動挿入ウェイトタイプ	一般
-＄手動セーブ	実行
-
-＊OnCacheSuspend
-＞OnSatoriUnLoad
-＊OnSatoriUnload
-＄全タイマ解除	実行
-＄ローター	0
-
 ＃────────
 ＃■初回起動
 ＃────────
@@ -35,6 +21,7 @@
 ＃起動
 ＃────────
 ＊OnBoot
+＄辞書フォルダ	.,Common
 ＄ゆい起動回数＝（ゆい起動回数）+１
 ＞ゆい調教完了	（ゆい起動回数）==10
 ＞陥落起動	（ゆい陥落）
