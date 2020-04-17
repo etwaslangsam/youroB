@@ -82,6 +82,7 @@
 ＃ゴースト切り替え
 ＃────────
 ＊OnGhostChanged
+＄辞書フォルダ	youroW,Common
 ＞（Ｒ０）から変更
 ＞起動
 

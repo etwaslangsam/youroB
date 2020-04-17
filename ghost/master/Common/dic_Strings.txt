@@ -3,6 +3,7 @@
 ＃────────
 ＠homeurl
 https://raw.githubusercontent.com/etwaslangsam/youroB/master/
+
 ＠shellrootbutton.caption
 キャラクター変更
 
