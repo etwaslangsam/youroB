@@ -3,6 +3,7 @@
 ＊OnSatoriUnload
 ＄全タイマ解除	実行
 ＄ローター	0
+＄PussyCount	
 
 ＃────────
 ＃シェル変更
@@ -16,6 +17,7 @@
 ＃最小化解除
 ＃────────
 ＊OnWindowStateRestore
+＄手動セーブ	実行
 ＞最小化解除
 ＞出てくる
 

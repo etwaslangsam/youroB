@@ -71,3 +71,8 @@ http://jbbs.shitaraba.net/computer/44300/
 iwhenlist,iŒ»İ—j“új==,“y,‹x“ú,“ú,‹x“ú,•½“új
 —‹Gß
 iwhenlist,iŒ»İŒj<,3,“~,6,t,7,”~‰J,9,‰Ä,12,H,“~j
+
+—áz¹
+itimesA5A\![move,3,fix,30,me]\![move,-3,fix,30,me]j
+—áz¹‚Q
+itimesA3A\![move,3,fix,30,me]\![move,-3,fix,30,me]j
