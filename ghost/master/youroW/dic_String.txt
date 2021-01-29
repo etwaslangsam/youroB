@@ -1,0 +1,5 @@
+
+＠痙攣
+（times、5、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+＠痙攣２
+（times、3、\![move,3,fix,30,me]\![move,-3,fix,30,me]）

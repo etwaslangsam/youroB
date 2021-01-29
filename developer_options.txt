@@ -3,3 +3,4 @@ ghost/master/satori_savebackup.txt,nonar,noupdate
 ghost/master/satori_savedata.txt,nonar,noupdate
 ghost/master/youroV/,nonar,noupdate
 shell/youroV/,nonar,noupdate
+.gitignore,nonar,noupdate

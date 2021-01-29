@@ -4,3 +4,4 @@ ghost\master\youroW\dic_Menu.txt
 ghost\master\dic_String.txt
 ghost\master\youroR\dic_String.txt
 ghost\master\youroW\dic_String.txt
+.gitignore
