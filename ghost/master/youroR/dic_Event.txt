@@ -22,6 +22,8 @@
 ＄辞書フォルダ	youroV,Common
 
 ＊OnShellChanged
+＄辞書フォルダ	youroR,Common
+＄手動セーブ	実行
 ＞OnBoot
 
 ＃────────

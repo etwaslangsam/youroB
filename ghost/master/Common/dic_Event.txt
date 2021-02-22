@@ -42,28 +42,16 @@
 ＞（Reference1）
 ＞ジャンプ先がない
 
-＊OnAnchorSelect
-＄選択ＩＤ	（Reference0）
-＞（Reference0）
-＞ジャンプ先がない
-
-＊OnChoiceSelectEx
-＄選択ＩＤ	（Reference1）
-＄選択ラベル	（Reference0）
-＞（Reference1）
-＞ジャンプ先がない
-
-＊OnChoiceSelect
-＄選択ＩＤ	（Reference0）
-＞（Reference0）
-＞ジャンプ先がない
-
 ＃────────
 ＃マウス
 ＃────────
+＊OnMouseClick
+＄（Reference3）（Reference4）見つめタイマ	
+＞（Reference3）（Reference4）つつかれ	（Reference5）==0&&（is_empty,（Reference4））==0
+
 ＊OnMouseDoubleClick
 ＄（Reference3）（Reference4）見つめタイマ	
-＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
+＞（Reference3）つつかれ	（Reference5）==0&&（is_empty,（Reference4））
 
 ＊OnMouseWheel
 ＄（Reference3）（Reference4）見つめタイマ	
@@ -112,3 +100,47 @@
 ＃────────
 ＊OnKeyPress
 ＞（Reference0）が押された
+
+＃────────
+＃
+＃────────
+＊OnWebClap
+\![open,inputbox,拍手送信内容,,--limit=996]
+\0\e
+
+＊拍手送信内容を教えてもらった
+\0\_q（拍手送信内容）\_q
+\1（この内容で送信します）
+\_q
+\![*]\q[送信する,SendClap] \![*]\q[やめる,拍手送信内容が空打ちされた]
+\_q\e
+
+＊SendClap
+\![execute,http-post,http://clap.webclap.com/clap.php?id=teniwa,--param=message_body="幼露＠（拍手送信内容）",--async=webclap]
+＄拍手送信内容	
+
+＊簡易拍手1
+\![execute,http-post,http://clap.webclap.com/clap.php?id=teniwa,--param=message_body="幼露＠いいねφ！",--async=webclap]
+＄拍手送信内容	
+＊簡易拍手2
+\![execute,http-post,http://clap.webclap.com/clap.php?id=teniwa,--param=message_body="幼露＠すき!",--async=webclap]
+＄拍手送信内容	
+＊簡易拍手3
+\![execute,http-post,http://clap.webclap.com/clap.php?id=teniwa,--param=message_body="幼露＠Cute!",--async=webclap]
+＄拍手送信内容	
+
+＊拍手送信内容が空打ちされた
+＄拍手送信内容	
+\0φ（中断しますφ）\e
+
+＊OnExecuteHTTPComplete
+＞拍手送信完了		（compare,（Reference1）,webclap）
+＊拍手送信完了
+＞（選択ラベル）が送信された
+\0（送信完了φ。ありがとうございますφ。）\e
+
+＊OnExecuteHTTPFailure
+＞拍手送信失敗		（compare,（Reference1）,webclap）
+
+＊拍手送信失敗
+\0φ（（Reference4）φ）\e

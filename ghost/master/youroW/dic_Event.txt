@@ -23,6 +23,7 @@
 
 ＊OnShellChanged
 ＄辞書フォルダ	youroW,Common
+＄手動セーブ	実行
 ＞OnFirstBoot	（みこと初回起動）==0
 ＞深夜起動	（現在時）＜５
 ＞朝起動	（現在時）＜１１
