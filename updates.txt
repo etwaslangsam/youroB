@@ -1,4 +1,3 @@
-charset,Shift_JIS
 file,delete.txt2be2193b5c1eafe0f8bbaef56731b6d9size=104
 file,developer_options.txt2f559560f5482bf2e17ec8324efd1a85size=216
 file,install.txtdeac25c230e08e9ba8d778cbb85642aesize=116
@@ -22,7 +21,7 @@ file,ghost/master/Common/dic_Strings.txt7e390ea07fffe003f1e087437c1eb886size=1
 file,ghost/master/Common/dic_webclap.txt4b7f7662786953e04636042a864e019bsize=1129
 file,ghost/master/saori/ssu.dll0df2627cc03c5adaf4cf3b485eb34b26size=90112
 file,ghost/master/youroR/dic_Event.txt48bd94ca509d85d18fb9ec7d0eb997cbsize=2174
-file,ghost/master/youroR/dic_Menu.txta3a69c2429808f681ede01e2ba063cdfsize=2933
+file,ghost/master/youroR/dic_Menu.txtfb6ec6342a5dfe2c62544f0884e3d829size=3049
 file,ghost/master/youroR/dic_Mouse.txt225d32325f783984137e0e137a45fda6size=939
 file,ghost/master/youroR/dic_StartEnd.txtb05d1638a8a56cde665e6c0a31f6f89csize=1823
 file,ghost/master/youroR/dic_Talk.txtd7d1a8b71897034e5fc41fd8a16f4dcfsize=7374
