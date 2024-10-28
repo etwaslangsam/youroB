@@ -1,3 +1,4 @@
+charset,Shift_JIS
 file,delete.txt2be2193b5c1eafe0f8bbaef56731b6d9size=104
 file,developer_options.txt2f559560f5482bf2e17ec8324efd1a85size=216
 file,install.txtdeac25c230e08e9ba8d778cbb85642aesize=116
@@ -13,7 +14,7 @@ file,ghost/master/dic_Talk.txtc754173218d8d4987abd8de7a97a9c15size=4071
 file,ghost/master/icon.ico5a7a5225a4454276c91037f44a615967size=3262
 file,ghost/master/replace.txt9cb1539a7c7ba4ef1a8bbac0f0aba7e4size=11
 file,ghost/master/replace_after.txt8911b640c703898531fa42e906d828ccsize=40
-file,ghost/master/satori.dlld5459db8ca01498dec864ebde1cfb74dsize=716800
+file,ghost/master/satori.dllfbcf6252dd6831c1e4e9a22a0a8e189bsize=716800
 file,ghost/master/satori_conf.txt0418cb8fb88412add094b907db194862size=1488
 file,ghost/master/satori_license.txt078ffc36f3374648bf523ae197f4765csize=944
 file,ghost/master/Common/dic_Event.txt3a11d867c215252300976c8d7c583765size=2290
