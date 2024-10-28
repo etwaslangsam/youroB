@@ -2,6 +2,8 @@
 ＠homeurl
 https://raw.githubusercontent.com/etwaslangsam/youroB/master/
 
+＠portalrootbutton.caption
+配布元
 ＠shellrootbutton.caption
 キャラクター変更
 
@@ -12,11 +14,11 @@ https://hotpepar.blogspot.com/
 
 
 ＊sakura.portalsites
-バグ報告
+メッセージフォーム
 https://goo.gl/forms/qJhnaKjUfVtcOWSk1
 
 ＊sakura.portalsites
-ご意見φ・ご要望
+web拍手
 script:\![raise,OnWebClap,ご意見φ・ご要望]
 
 ＃────────ポータル
@@ -72,9 +74,11 @@ http://jbbs.shitaraba.net/computer/44300/
 ＠痙攣２
 （times、3、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
 
-＠痙攣
-（times、4、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+
 ＠ピク
 （times、1、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
 ＠ピクピク
 （times、2、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+
+＠はーと
+\f[color,#e34174]\f[bold,1]\f[name,メイリオ]\_u[0x2665]\f[name,default]\f[bold,0]\f[color,default]

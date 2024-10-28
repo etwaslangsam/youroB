@@ -33,9 +33,9 @@ menu.background.font.color.r,255
 menu.background.font.color.g,255
 menu.background.font.color.b,255
 
-menu.disable.font.color.r,186
-menu.disable.font.color.g,218
-menu.disable.font.color.b,255
+menu.disable.font.color.r,34
+menu.disable.font.color.g,139
+menu.disable.font.color.b,34
 
 menu.separator.color.r,255
 menu.separator.color.g,255
