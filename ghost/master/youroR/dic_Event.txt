@@ -1,14 +1,13 @@
 ＊OnCacheRestore
 ＞OnSatoriLoad
+
 ＊OnSatoriLoad
 ＄文「＊」の重複回避	有効、起動中
 ＄単語群「＊」の重複回避	有効、起動中
 ＄自動挿入ウェイトタイプ	一般
-＄手動セーブ	実行
+＄移動距離	
 
-＃────────
-＃シェル変更
-＃────────
+＃────────シェル変更
 ＊ゆいに交代
 \0（0なでられ）
 ＄辞書フォルダ	.,Common
@@ -26,9 +25,7 @@
 ＄手動セーブ	実行
 ＞OnBoot
 
-＃────────
-＃■インストール
-＃────────
+＃────────■インストール
 ＊OnInstallBegin
 \0\s[304]あれ……？\w5
 なにか、落ちてる……。
@@ -56,9 +53,7 @@
 ち、近寄らないでおこっ……。
 \e
 
-＃────────
-＃■ダウンロード
-＃────────
+＃────────■ダウンロード
 ＊OnURLDropping
 \0\s[400]こ、ここでダウンロードしてみちゃお……。\w5\e
 
@@ -69,9 +64,7 @@
 私、こんなところでダウンロードしちゃってる……。
 \e
 
-＃────────
-＃■ネットワーク更新
-＃────────
+＃────────■ネットワーク更新
 ＊OnUpdateBegin
 \0\s[304]ネットワーク更新……。\e
 
@@ -102,9 +95,7 @@
 ＊OnUpdateFailure
 \0\s[311]（Reference0）で失敗なんて……そんな……。\e
 
-＃────────
-＃■ファイル作成
-＃────────
+＃────────■ファイル作成
 ＊OnUpdatedataCreating
 \0\s[402]は、裸で更新ファイル作っちゃお……（はーと）\w5\e
 
@@ -116,23 +107,3 @@
 
 ＊OnNarCreated
 \0\s[400]作っちゃった……Narファイル……。\e
-
-＃────────
-＃■web拍手
-＃────────
-＊OnWebClap
-\![open,inputbox,拍手送信内容,-1,いいね！,--limit=1000]
-\0\s[401]メッセージ……。\e
-
-＊拍手送信内容を教えてもらった
-\![execute,http-post,http://clap.webclap.com/clap.php?id=etwaslangsam,--param=message_body="つきね＠（拍手送信内容）",--async=webclap]
-＄拍手送信内容	
-
-＊拍手送信内容を空打ちされた
-：\_q(キャンセルしました)\_q
-
-＊OnExecuteHTTPComplete	（Reference1）==webclap
-\0\s[402]よし……と。\e
-
-＊OnExecuteHTTPFailure	（Reference1）==webclap
-\0\s[311]（Reference4）で失敗……。\e

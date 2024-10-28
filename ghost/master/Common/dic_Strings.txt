@@ -1,70 +1,65 @@
-＃────────
-＃■リソース
-＃────────
+＃────────■リソース
 ＠homeurl
 https://raw.githubusercontent.com/etwaslangsam/youroB/master/
 
 ＠shellrootbutton.caption
 キャラクター変更
 
-＃────────
-＃お気に入り
-＃────────
-＊sakura.recommendsites
-配布サイト
-http://ghosthacking.webcrow.jp/index.html
+＃────────お気に入り
+＊sakura.portalsites
+実家
+https://hotpepar.blogspot.com/
 
 
-＊sakura.recommendsites
+＊sakura.portalsites
 バグ報告
 https://goo.gl/forms/qJhnaKjUfVtcOWSk1
 
-
-＃────────
-＃ポータル
-＃────────
 ＊sakura.portalsites
+ご意見φ・ご要望
+script:\![raise,OnWebClap,ご意見φ・ご要望]
+
+＃────────ポータル
+＊sakura.recommendsites
 SSPのバグ報告はこちら
 
 
-＊sakura.portalsites
+＊sakura.recommendsites
 SSP BUGTRAQ 
 http://ssp.shillest.net/ 
 
 
-＊sakura.portalsites
+＊sakura.recommendsites
 ゴースト探すなら
 
 
-＊sakura.portalsites
+＊sakura.recommendsites
 GHOST TOWN
 http://ghosttown.mikage.jp/
 
-＊sakura.portalsites
+＊sakura.recommendsites
 総合情報サイト
 
 
-＊sakura.portalsites
+＊sakura.recommendsites
 Disc-2 
 http://disc2.s56.xrea.com/ 
 
 
-＊sakura.portalsites
+＊sakura.recommendsites
 Uka-Ni-Sphere
 http://www.ghost.sakura.tv/index.html
 
 
-＊sakura.portalsites
+＊sakura.recommendsites
 ゴーストの感想などは
 
 
-＊sakura.portalsites
+＊sakura.recommendsites
 ゴースト回覧板３ｒｄ
 http://jbbs.shitaraba.net/computer/44300/
 
-＃────────
-＃単語群
-＃────────
+＃────────単語群
 ＠時間帯
 （whenlist,（現在時）<,5,深夜,10,朝,16,昼,19,夕方,23,夜,深夜）
 ＠曜日
@@ -76,3 +71,10 @@ http://jbbs.shitaraba.net/computer/44300/
 （times、5、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
 ＠痙攣２
 （times、3、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+
+＠痙攣
+（times、4、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+＠ピク
+（times、1、\![move,3,fix,30,me]\![move,-3,fix,30,me]）
+＠ピクピク
+（times、2、\![move,3,fix,30,me]\![move,-3,fix,30,me]）

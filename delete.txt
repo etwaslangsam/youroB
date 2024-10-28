@@ -1,4 +1,4 @@
 .gitignore
 ghost\master\dic_Time.txt
-ghost\master\youroR\dic_Menu.txt
 ghost\master\dic_String.txt
+ghost\master\youroR\dic_String.txt

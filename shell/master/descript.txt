@@ -25,17 +25,17 @@ menu.foreground.bitmap.filename,menu_foreground.png
 menu.sidebar.bitmap.filename,menu_sidebar.png
 
 
-menu.foreground.font.color.r,255
-menu.foreground.font.color.g,255
-menu.foreground.font.color.b,0
+menu.foreground.font.color.r,248
+menu.foreground.font.color.g,0
+menu.foreground.font.color.b,191
 
-menu.background.font.color.r,0
+menu.background.font.color.r,255
 menu.background.font.color.g,255
-menu.background.font.color.b,0
+menu.background.font.color.b,255
 
-menu.disable.font.color.r,168
-menu.disable.font.color.g,168
-menu.disable.font.color.b,168
+menu.disable.font.color.r,186
+menu.disable.font.color.g,218
+menu.disable.font.color.b,255
 
 menu.separator.color.r,255
 menu.separator.color.g,255

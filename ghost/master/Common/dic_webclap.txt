@@ -1,0 +1,46 @@
+＃────────
+＊OnWebClap
+\![open,inputbox,WEB拍手もどき入力,--timeout=-1,--text=いいね！,--limit=800]
+
+＊WEB拍手もどき入力を教えてもらった
+＄送信内容	（Reference1）
+＄メモ	手動
+\0\_q（送信内容）\_q
+\1（この内容で送信します）
+\_q
+\![*]\q[送信する,SendClap] \![*]\q[やめる,拍手送信内容が空打ちされた]
+\_q\e
+
+
+＠WCM_URL
+https://script.google.com/macros/s/AKfycbxHT6cacuEsMdGulS0c_a29X1pjDu5CUC3BPqAd9_wwskSn9l1oAAaN216XusA9siAX/exec
+＠送信元
+幼露
+
+＊SendClap
+\![execute,http-post,（WCM_URL）,--param=message_body="（送信元）;（送信内容）;（メモ）",--async=webclap,--timeout=5]
+＄拍手送信内容	
+
+＊簡易拍手
+＄送信内容	（選択ラベル）
+＄メモ	定型
+\![execute,http-post,（WCM_URL）,--param=message_body="（送信元）;（送信内容）;（メモ）",--async=webclap,--timeout=5]
+
+
+＊拍手送信内容が空打ちされた
+＄拍手送信内容	
+\0φ（中断しますφ）
+
+
+＊OnExecuteHTTPComplete
+＞（Reference1）が送信された
+
+＊webclapが送信された
+\0（送信が完了しました、ありがとうございます）\e
+
+＊OnExecuteHTTPFailure
+＞（Reference1）が失敗した
+\0φ（（Reference4）φ）\e
+
+＊webclapが失敗した
+\0（送信に失敗しました）\e
