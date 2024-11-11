@@ -194,7 +194,7 @@ http://jbbs.shitaraba.net/computer/44300/
 —â’¸
 \![lock,repaint]‚£````````````itimesA3Ai‚Í[‚Æjj \![unlock,repaint]
 \![lock,repaint]‚Á````````````itimesA3Ai‚Í[‚Æjj \![unlock,repaint]
-\![lock,repaint]‚ñA‚¡``````````itimesA3Ai‚Í[‚Æjj \![unlock,repaint]
+\![lock,repaint]‚âA‚Ÿ``````````itimesA3Ai‚Í[‚Æjj \![unlock,repaint]
 \![lock,repaint]‚ñ‚Á```````````itimesA3Ai‚Í[‚Æjj \![unlock,repaint]
 
 
