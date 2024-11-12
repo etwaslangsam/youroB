@@ -42,10 +42,14 @@
 ＃────────マウス
 ＊OnMouseClick
 ＄（Reference3）（Reference4）見つめタイマ	
+＄前回さわった場所	（さわった場所）
+＄さわった場所	（Reference4）
 ＞（Reference3）（Reference4）つつかれ	（Reference5）==0&&（is_empty,（Reference4））==0
 
 ＊OnMouseDoubleClick
 ＄（Reference3）（Reference4）見つめタイマ	
+＄前回さわった場所	（さわった場所）
+＄さわった場所	（Reference4）
 ＞（Reference3）つつかれ	（Reference5）==0&&（is_empty,（Reference4））
 
 ＊OnMouseWheel
