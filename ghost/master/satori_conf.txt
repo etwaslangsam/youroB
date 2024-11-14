@@ -1,3 +1,4 @@
+
 –‰Šú‰»
 ’‚èŠÔŠu	‚P‚W‚O•b
 ’‚èŠÔŠuŒë·	‚P‚O“
@@ -20,6 +21,7 @@
 Žž•ñÝ’è	‚P
 Ž©“®ƒAƒ“ƒJ[	–³Œø 
 ƒ€ƒXƒR–¼	‚¨‚¿‚ñ‚Û
+total_‚ä‚¢â’¸	0
 —SAORI
 calc,saori/ssu.dll,calc
 calc_float,saori/ssu.dll,calc_float
