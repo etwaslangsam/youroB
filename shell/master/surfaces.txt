@@ -19,13 +19,13 @@ element0,base,surface5540.png,0,0
 }
 
 //うつむき・右腹・左腹
-surface400-402
+surface400-403
 {
 element0,base,surface1660.png,0,0
 }
 
 //うつむき・右腹・左胸
-surface500-502
+surface500-503
 {
 element0,base,surface5160.png,0,0
 }
@@ -184,6 +184,10 @@ surface402,502
 element1,overlay,surface1062.png,0,0
 }
 
+surface403,503
+{
+element1,overlay,surface1063.png,0,0
+}
 
 
 surface600
