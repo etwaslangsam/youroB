@@ -14,13 +14,11 @@
 ＄ローター	0
 ＞（Reference0）に交代
 
-
 ＃────────最小化解除
 ＊OnWindowStateRestore
 ＄手動セーブ	実行
 ＞最小化解除
 ＞出てくる
-
 
 ＃────────ユーザ入力
 ＊OnUserInput
@@ -32,14 +30,12 @@
 ＞（Reference0）をタイムアウト	（compare（バイト値,１）（Reference1）（バイト値,１）timeout）
 ＞（Reference0）を空打ちされた	（compare,（Reference1）,close）
 
-
 ＃────────選択肢
 ＊OnAnchorSelectEx
 ＄選択ＩＤ	（Reference1）
 ＄選択ラベル	（Reference0）
 ＞（Reference1）
 ＞ジャンプ先がない
-
 
 ＃────────マウス
 ＃＊OnMouseClick
@@ -66,13 +62,10 @@
 ＞（Reference3）（Reference4）つつかれ	（Reference5）＝＝0
 
 ＊OnMouseHover
-＄（Reference3）（Reference4）見つめタイマ	１
+＄（Reference3）（Reference4）見つめタイマ	３
 
 ＊OnMouseLeave
 ＄（Reference3）（Reference4）見つめタイマ	
-
-＊OnMouseLeaveAll
-＄全タイマ解除	実行
 
 ＊OnMouseEnterAll
 ＞（Reference3）にカーソルイン	（compare，（Status），talking）==0
