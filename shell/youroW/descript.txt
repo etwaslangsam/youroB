@@ -43,3 +43,11 @@ menu.separator.color.b,255
 
 
 menu.sidebar.alignment,bottom
+
+
+sakura.bindgroup100.name,装飾品,使用済みゴム,thumnail
+sakura.bindgroup101.name,装飾品,コンドーム,thumnail
+akura.bindgroup100.default,0
+akura.bindgroup101.default,0
+
+sakura.menu,auto

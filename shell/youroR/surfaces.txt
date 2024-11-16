@@ -180,6 +180,22 @@ collision1,133,184,192,216,Bust
 collision2,146,293,179,313,Pussy
 }
 
+//アニメーション//
+surface.append0-9,30-407
+{
+animation0.interval,never
+animation0.pattern0,overlay,9000,0,0,0
+
+animation1.interval,never
+animation1.pattern0,overlay,9001,0,0,0
+}
+
+surface.append0,30,308,310,320-321,402,405-407
+{
+animation2.interval,runonce
+animation2.pattern0,overlay,9002,0,0,0
+}
+
 //カーソル//
 sakura.cursor
 {

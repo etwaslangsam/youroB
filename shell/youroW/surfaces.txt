@@ -26,6 +26,8 @@ element0,base,surface6700.png,0,0
 surface23-25,203
 {
 element0,base,surface6760.png,0,0
+
+collisionex3,Face,polygon,128,121,155,125,160,141,155,155,135,160,118,153,116,138,120,123
 }
 
 //うつむき・右胸・左胸
@@ -242,7 +244,7 @@ collisionex2,Hip,polygon,121,280,113,268,98,283,93,298,95,316,98,328
 collisionex5,Leg,polygon,121,281,141,309,141,318,160,309,161,321,146,354,143,373,98,374,103,354,98,328
 }
 
-surface.append1-25
+surface.append1-25,203
 {
 collisionex0,Bust,polygon,151,181,158,195,160,203,151,213,146,211,128,218,118,193,118,185
 collisionex4,Body,polygon,160,228,165,250,168,273,168,293,133,293,121,278,113,268,118,258,123,253,130,261,140,258
@@ -253,7 +255,18 @@ surface.append1-22
 collisionex3,Face,polygon,118,153,135,158,155,146,158,135,165,123,165,106,155,93,133,103,123,123
 }
 
-surface.append23-25
+//アニメーション//
+surface.append0-9,20-407
 {
-collisionex3,Face,polygon,128,121,155,125,160,141,155,155,135,160,118,153,116,138,120,123
+animation0.interval,never
+animation0.pattern0,overlay,9000,0,0,0
+
+animation1.interval,never
+animation1.pattern0,overlay,9001,0,0,0
+
+animation100.interval,bind
+animation100.pattern0,overlay,9002,0,0,0
+
+animation101.interval,bind
+animation101.pattern0,overlay,9003,0,0,0
 }
