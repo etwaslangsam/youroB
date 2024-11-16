@@ -2,9 +2,7 @@
 ＞OnSatoriUnload
 
 ＊OnSatoriUnload
-＄ローター	0
 ＄PussyCount	
-
 
 ＃────────シェル変更
 ＊OnShellChanging
@@ -13,6 +11,11 @@
 ＄全タイマ解除	実行
 ＄ローター	0
 ＞（Reference0）に交代
+
+
+＊OnDressupChanged
+＞（Reference0）（Reference1）が有効になった	（Reference2）==1
+＞（Reference0）（Reference1）が無効になった	（Reference2）==0
 
 ＃────────最小化解除
 ＊OnWindowStateRestore

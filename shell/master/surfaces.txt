@@ -309,3 +309,16 @@ collisionex1,Bust,polygon,135,181,120,221,134,217,150,231,176,196
 collisionex3,Stomach,polygon,119,223,119,238,89,278,92,283,145,281,155,258,161,246,152,234,133,217
 collisionex5,Waki,polygon,176,199,180,216,169,233,159,244,150,232
 }
+
+//エフェクト・着せ替え//
+surface.append0-9,100-1007
+{
+animation0.interval,never
+animation0.pattern0,overlay,9000,0,0,0
+
+animation1.interval,never
+animation1.pattern0,overlay,9001,0,0,0
+
+animation100.interval,bind
+animation100.pattern0,overlay,9002,0,0,0
+}
