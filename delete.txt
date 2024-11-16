@@ -3,3 +3,6 @@ ghost\master\dic_Time.txt
 ghost\master\dic_String.txt
 ghost\master\youroR\dic_String.txt
 ghost\master\youroW\dic_String.txt
+shell\youroR\surface9460.png
+shell\youroR\surface7059.png
+shell\youroR\surface9750.png
