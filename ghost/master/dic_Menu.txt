@@ -5,10 +5,9 @@
 
 –ƒƒCƒ“ƒƒjƒ…[
 \0\c\_q
-\![*]\q[˜b‚µ‚Ä‚¢‚¢‚¼,‚U‚O•b‚¨‚«]
-\![*]\q[–Ù‚Á‚Ä‚¢‚ë,‚O•b‚¨‚«]\n
-\![*]\q[–½—ß‚·‚é,–½—ß‚·‚é]
-\![*]\q[Œ¾—tÓ‚ß,Œ¾—tÓ‚ß]
+\![*]\q[–½—ß‚·‚é,–½—ß‚·‚é]\n[half]
+\![*]\q[Œ¾—tÓ‚ß,Œ¾—tÓ‚ß]\n[half]
+\![*]\q[’‚è•p“x‚Ì•ÏX,TalkInterval]\n[half]
 \![*]\q[‚»‚Ì‘¼,‚»‚Ì‘¼]
 \n\q[‚È‚ñ‚Å‚à‚È‚¢,‚È‚ñ‚Å‚à‚È‚¢‚æ]
 \_q\e
@@ -20,17 +19,44 @@
 –Š×—Ž‚È‚ñ‚Å‚à‚È‚¢‚æ
 \0\s[601]‚»A‚»‚¤ddH\e
 
+”„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ’‚è•p“x
+–TalkInterval
+\0\_q¦Œ»Ý‚Í@i’‚èŠÔŠuj@‚¨‚«\n
+\![*]\q[‚P•ª‚¨‚«,‚U‚O•b‚¨‚«]
+\![*]\q[‚R•ª‚¨‚«,‚P‚W‚O•b‚¨‚«]
+\![*]\q[‚T•ª‚¨‚«,‚R‚O‚O•b‚¨‚«]\n[half]
+\![*]\q[’‚ç‚È‚¢,‚O•b‚¨‚«]
+\n\q[‚à‚Ç‚é,ƒƒCƒ“ƒƒjƒ…[]@\q[‚Æ‚¶‚é,‚È‚ñ‚Å‚à‚È‚¢‚æ]
+\_q
+
+–‚U‚O•b‚¨‚«
+’‚èŠÔŠu	‚U‚O•b
+„’‚èŒˆ’è
+–‚P‚W‚O•b‚¨‚«
+’‚èŠÔŠu	‚P‚W‚O•b
+„’‚èŒˆ’è
+–‚R‚O‚O•b‚¨‚«
+’‚èŠÔŠu	‚R‚O‚O•b
+„’‚èŒˆ’è
+–‚U‚O‚O•b‚¨‚«
+’‚èŠÔŠu	‚U‚O‚O•b
+„’‚èŒˆ’è
+
 –‚O•b‚¨‚«
 ’‚èŠÔŠu	‚O•b
 Žè“®ƒZ[ƒu	ŽÀs
 \0i“{‚èjddddB\e
 
-–‚U‚O•b‚¨‚«
-’‚èŠÔŠu	‚U‚O•b
+–’‚èŒˆ’è
+„’‚èŒˆ’è‚Q	i‚ä‚¢Š×—Žj==‚P
 ’‚èŠÔŠuŒë·	‚T‚O“
 Žè“®ƒZ[ƒu	ŽÀs
 \0i“{‚èj‚Ó‚ñAƒAƒ“ƒ^‚Æ˜b‚·‚±‚Æ‚È‚ñ‚Ä‚È‚¢‚íB\e
 
+–’‚èŒˆ’è‚Q
+’‚èŠÔŠuŒë·	‚T“
+Žè“®ƒZ[ƒu	ŽÀs
+\0\s[106]‚Ó‚£‚ñddB\e
 
 ”„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
 –‚»‚Ì‘¼
